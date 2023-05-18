@@ -26,7 +26,7 @@ const App = () => {
   const [results, setResults] = useState([])
 
   const GetMovieData = () => {
-    fetch("http://localhost:8080/api/getall")
+    fetch("https://rest-api-3yq7.onrender.com/api/getall")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -38,7 +38,7 @@ const App = () => {
   };
 
   const GetSingleData = () => {
-    fetch("http://localhost:8080/api/getone/:id")
+    fetch("https://rest-api-3yq7.onrender.com/api/getone/:id")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -52,7 +52,7 @@ const App = () => {
 
   const modifyMovie = () => {
     console.log("Query: " + query)
-    fetch("http://localhost:8080/api/update/:id" + query,{
+    fetch("https://rest-api-3yq7.onrender.com/api/update/:id" + query,{
       method: 'PUT'
     })
       .then((results) => {
